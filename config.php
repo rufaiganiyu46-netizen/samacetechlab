@@ -6,9 +6,8 @@ mysqli_report(MYSQLI_REPORT_OFF);
 define('DB_HOST', '5as1d0.h.filess.io');
 define('DB_USER', 'schoolportal_db_strangerso');
 define('DB_PASS', '2da7c588d3861c4cc9871c506c892e2a5926a9fd');
+define('DB_NAME', 'schoolportal_db_strangerso');
 define('DB_PORT', 3306);
-$db = null;
-$db_error = null;
 
 if (!class_exists('mysqli')) {
     $db_error = 'MySQLi is not enabled in this PHP environment.';
