@@ -3,19 +3,17 @@ session_start();
 
 mysqli_report(MYSQLI_REPORT_OFF);
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'schoolportal_db');
-
+define('DB_HOST', '5as1d0.h.filess.io');
+define('DB_USER', 'schoolportal_db_strangerso');
+define('DB_PASS', '2da7c588d3861c4cc9871c506c892e2a5926a9fd');
+define('DB_PORT', 3306);
 $db = null;
 $db_error = null;
 
 if (!class_exists('mysqli')) {
     $db_error = 'MySQLi is not enabled in this PHP environment.';
 } else {
-    $db = @new mysqli(DB_HOST, DB_USER, DB_PASS);
-
+    $db = @new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME, 3306);
     if ($db->connect_error) {
         $db_error = 'MySQL server connection failed. Please confirm your MySQL service is running and your credentials are correct.';
         $db = null;
