@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 require_once dirname(__DIR__) . '/config.php';
 
+$db_error = $db_error ?? null;
+
 $currentUser = current_user();
 if ($currentUser && (($currentUser['role'] ?? '') === 'parent')) {
     redirect('parent-dashboard.php');
