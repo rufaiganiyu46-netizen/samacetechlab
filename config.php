@@ -1,7 +1,9 @@
 <?php
 session_start();
 
-mysqli_report(MYSQLI_REPORT_OFF);
+if (function_exists('mysqli_report')) {
+    mysqli_report(MYSQLI_REPORT_OFF);
+}
 
 define('DB_HOST', '5as1d0.h.filess.io');
 define('DB_USER', 'schoolportal_db_strangerso');
